@@ -38,7 +38,8 @@ public class HelloResourceControllerTest {
         mockMvc.perform(get("/hello/json").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.title", Matchers.is("Greetings")))
-                .andExpect(jsonPath("$.value",Matchers.is("Hello World")));
+                .andExpect(jsonPath("$.value",Matchers.is("Hello World")))
+                .andExpect(jsonPath("$.*",Matchers.hasSize(2)));
     }
 
 
