@@ -33,6 +33,7 @@ public class HelloResourceControllerTest {
                 .andExpect(content().string("hello"));
     }
 
+    
     @Test
     public void testHelloWorldJson() throws Exception {
         mockMvc.perform(get("/hello/json").accept(MediaType.APPLICATION_JSON))
