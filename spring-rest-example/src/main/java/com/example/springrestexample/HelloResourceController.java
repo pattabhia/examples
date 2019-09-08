@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+//author: Pattabhi
 @RestController
 @RequestMapping("/hello")
 public class HelloResourceController {
