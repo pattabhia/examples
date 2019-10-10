@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 public class ForEachEx1 {
     public static void main(String[] args) {
         List<String> asteriks = Arrays.asList("****","***","**","*");
-        Consumer<String> consumer = s -> System.out.println(s);
+        Consumer<String> consumer = System.out::println;
         asteriks.forEach(consumer);
     }
 
