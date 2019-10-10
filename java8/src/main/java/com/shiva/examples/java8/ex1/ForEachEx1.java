@@ -6,9 +6,9 @@ import java.util.function.Consumer;
 
 public class ForEachEx1 {
     public static void main(String[] args) {
-        List<String> asteriks = Arrays.asList("****","***","**","*");
+        List<String> asterisks = Arrays.asList("****","***","**","*");
         Consumer<String> consumer = System.out::println;
-        asteriks.forEach(consumer);
+        asterisks.forEach(consumer);
     }
 
 }
