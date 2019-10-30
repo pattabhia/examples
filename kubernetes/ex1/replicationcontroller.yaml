@@ -16,3 +16,4 @@ spec:
                   image: nigelpoulton/pluralsight-docker-ci:latest
                   ports:
                     - containerPort: 8080
+                    
