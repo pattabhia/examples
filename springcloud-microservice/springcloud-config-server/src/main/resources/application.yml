@@ -12,7 +12,3 @@ spring:
               #pattern: "*/perf"
               #uri: https://github.com/pattabhia/examples
               #search-paths: 'station*'
-  security:
-    user:
-      name: 'pattabhi'
-      password: 'welcome'
