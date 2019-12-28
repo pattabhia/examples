@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/pattabhia/springcloud-configuration
+          search-paths: 'station*'
+          repos:
+            perf:
+              pattern: "*/perf"
+              uri: https://github.com/pattabhia/springcloud-configuration-perf
+              search-paths: 'station*'
+  security:
+    user:
+      name: 'pattabhi'
+      password: 'welcome'
