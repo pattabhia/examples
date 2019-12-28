@@ -7,8 +7,7 @@ spring:
         git:
           uri: https://github.com/pattabhia/springcloud-configuration
           search-paths: 'station*'
-          #repos:
-            #perf:
-              #pattern: "*/perf"
-              #uri: https://github.com/pattabhia/examples
-              #search-paths: 'station*'
+  security:
+    user:
+      name: pattabhi
+      password: welcome

@@ -14,10 +14,12 @@ public class RateController {
     private String rate;
     @Value("${tollstart}")
     private String tollstart;
+    @Value("${connstring}")
+    private String connstring;
 
     @RequestMapping(value = "/rate")
     public String display() {
-        return "[Rate = "+this.rate+ "] = [Lanecount ="+this.lanecount+"] = [tollstart ="+this.tollstart +" ]";
+        return "[Rate = "+this.rate+ "] = [Lanecount ="+this.lanecount+"] = [tollstart ="+this.tollstart +" ] = [ connstring="+connstring+" ]";
     }
 
 }
