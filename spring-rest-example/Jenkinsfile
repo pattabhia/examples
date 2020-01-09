@@ -1,29 +1,21 @@
 node {
     def app
-        stage('Clone repo') {
-          steps {
-            checkout scm
-          }
-        }
 
-        stage('clean install') {
-            steps {
-                sh 'mvn -f spring-rest-example/pom.xml clean install'
-            }
-        }
+    stage('Clone repo') {
+       checkout scm
+    }
+
+    stage('clean install') {
+       sh 'mvn -f spring-rest-example/pom.xml clean install'
+    }
         
-        stage('build docker image') {
-            steps {
-                app = docker.build("sunlnx/spring-docker-pipeline-test")
-            }
-        }
+    stage('build docker image') {
+       app = docker.build("sunlnx/spring-docker-pipeline-test")
+    }
 
-
-        stage('push docker image') {
-            steps {
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') 
-                app.push("${env.BUILD_NUMBER}")
-                app.push("latest")
-            }
-        } 
+    stage('push docker image') {
+       docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') 
+       app.push("${env.BUILD_NUMBER}")
+       app.push("latest")
+    } 
 }
