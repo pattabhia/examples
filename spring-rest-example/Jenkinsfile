@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    def app
 
     stages {
 
@@ -19,15 +18,17 @@ pipeline {
         stage('build docker image') {
             steps {
                 app = docker.build("sunlnx/spring-docker-pipeline-test")
+            }
         }
 
 
         stage('push docker image') {
             steps {
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') 
                 app.push("${env.BUILD_NUMBER}")
                 app.push("latest")
-            } 
-        }
+            }
+        } 
+        
     }
 }
