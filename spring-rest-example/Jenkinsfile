@@ -1,0 +1,17 @@
+node {
+  stage('Clone repo')
+    checkout scm
+}
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn package install'  
+                archiveArtifacts artifacts: '**/target/*.jar' 
+            }
+        }
+    }
+}
