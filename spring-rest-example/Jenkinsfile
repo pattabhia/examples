@@ -1,12 +1,14 @@
-node {
-    stage('Clone repository') {
-        checkout scm
-    }
-}
-
 pipeline {
     agent any
+
     stages {
+
+        stage('Clone repo') {
+          steps {
+            checkout scm
+          }
+        }
+
         stage('build spring-rest-example') {
             steps {
                 sh 'mvn -B clean verify'
