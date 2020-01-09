@@ -1,17 +1,14 @@
 node {
-  stage('Clone repo')
-    checkout scm
-}
 
-pipeline {
-    agent any
+  def rtMaven = Artifactory.newMavenBuild()
 
-    stages {
-        stage('Build') {
-            steps {
-                sh 'mvn install package'  
-                archiveArtifacts artifacts: '**/target/*.jar' 
-            }
-        }
+  def buildInfo
+    stage('Clone repo')
+      checkout scm
+
+  stage('Maven build') {
+        buildInfo = rtMaven.run pom: 'spring-rest-example/pom.xml', goals: 'clean install'
     }
+  
+
 }
