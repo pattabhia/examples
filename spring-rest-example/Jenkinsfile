@@ -11,7 +11,7 @@ pipeline {
 
         stage('build spring-rest-example') {
             steps {
-                sh 'mvn -B clean verify'
+                sh 'mvn clean'
             }
         }
     }
