@@ -6,11 +6,11 @@ node {
     }
 
     stage('clean install') {
-       sh 'mvn -f spring-rest-example/pom.xml clean install'
+       sh 'mvn -f ./spring-rest-example/pom.xml clean install'
     }
         
     stage('build docker image') {
-       app = docker.build("sunlnx/spring-docker-pipeline-test")
+       app = docker.build("sunlnx/spring-docker-pipeline-test","-f ./spring-rest-example/Dockerfile")
     }
 
     stage('push docker image') {
