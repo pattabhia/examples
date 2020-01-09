@@ -10,7 +10,8 @@ node {
     }
         
     stage('build docker image') {
-       app = docker.build("sunlnx/spring-docker-pipeline-test -f ./spring-rest-example/Dockerfile")
+       def dockerfile =  './spring-rest-example/Dockerfile'
+       app = docker.build("sunlnx/spring-docker-pipeline-test", "-f ${dockerfile} ./spring-rest-example")
     }
 
     stage('push docker image') {
