@@ -21,4 +21,9 @@ node {
        }
      echo "Trying to Push Docker Build to DockerHub"
     } 
+
+    stage('start container') {
+       sh 'docker run -d -p 9090:9090 --name spring-rest-example sunlnx/spring-docker-pipeline-test:${env.BUILD_NUMBER}'
+       echo 'Port exposed on http://localhost:9090/<api>/'
+    }
 }
