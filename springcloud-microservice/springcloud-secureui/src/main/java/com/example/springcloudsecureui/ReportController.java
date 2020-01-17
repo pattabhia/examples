@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ReportController {
 
-    @RequestMapping("/home")
+    @RequestMapping("/")
     public String loadHome() {
         return "home";
     }
