@@ -1,10 +1,3 @@
-.idea/*
-*.iml
-.idea/*.xml
-.class
-target/*
-/.idea/
+/datastructures.iml
 /target/
-/.idea/
-/target/classes/com/abhiram/algo/tree/
 /.idea/
