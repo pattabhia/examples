@@ -3,3 +3,8 @@
 .idea/*.xml
 .class
 target/*
+/.idea/
+/target/
+/.idea/
+/target/classes/com/abhiram/algo/tree/
+/.idea/
