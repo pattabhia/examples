@@ -8,5 +8,6 @@ public class PreOrderTraversal {
         binaryTree.setRoot(root);
 
         System.out.println(binaryTree.getRoot().getData());
+
     }
 }
