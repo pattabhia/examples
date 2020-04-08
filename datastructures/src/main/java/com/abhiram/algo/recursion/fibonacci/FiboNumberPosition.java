@@ -1,4 +1,4 @@
-package com.abhiram.algo.recursion;
+package com.abhiram.algo.recursion.fibonacci;
 
 public class FiboNumberPosition {
 
