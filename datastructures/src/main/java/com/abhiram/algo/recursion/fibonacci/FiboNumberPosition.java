@@ -1,6 +1,6 @@
 package com.abhiram.algo.recursion.fibonacci;
 
-public class FiboNumberPosition {
+public class  FiboNumberPosition {
 
     public static void main(String[] args) {
         int num = 9;
@@ -18,3 +18,5 @@ public class FiboNumberPosition {
         return fibonacci(num - 1) + fibonacci(num - 2);
     }
 }
+
+
