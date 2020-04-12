@@ -1,23 +1,20 @@
 package com.abhiram.algo.recursion.fibonacci;
 
-public class  FiboNumberPosition {
+public class  FiboNumberPosition extends Fibonacci {
+
+    public FiboNumberPosition() {
+        super();
+    }
 
     public static void main(String[] args) {
-        int num = 9;
-        int result = fibonacci(num);
+        int num = 25;
+        int result = new FiboNumberPosition().fibonacci(num);
         System.out.printf(" %d position of fibonacci series is %d", num, result);
     }
 
-    private static int fibonacci(int num) {
-        if (num < 1) {
-            return -1;
-        }
-        if (num == 1 || num == 2) {
-            return num-1;
-        }
-
-        return fibonacci(num - 1) + fibonacci(num - 2);
-
+    @Override
+    public int fibonacci(int num) {
+        return super.fibonacci(num);
     }
 }
 
