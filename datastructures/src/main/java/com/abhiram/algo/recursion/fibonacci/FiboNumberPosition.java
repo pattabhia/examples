@@ -1,6 +1,6 @@
 package com.abhiram.algo.recursion.fibonacci;
 
-public class  FiboNumberPosition extends Fibonacci {
+public class FiboNumberPosition extends Fibonacci {
 
     public FiboNumberPosition() {
         super();

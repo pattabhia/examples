@@ -9,9 +9,9 @@ public class FibonacciWithOutRecursion {
         int count = 10;
         for (int j = 2; j < count; ++j) {
             n3 = n1 + n2;
-            System.out.println(" "+n3);
-            n1=n2;
-            n2=n3;
+            System.out.println(" " + n3);
+            n1 = n2;
+            n2 = n3;
         }
     }
 }
