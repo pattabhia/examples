@@ -8,3 +8,4 @@ springcloud-microservice/.idea/misc.xml
 springcloud-microservice/.idea/modules.xml
 springcloud-microservice/.idea/springcloud-microservice.iml
 springcloud-microservice/.idea/vcs.xml
+*.pyc
